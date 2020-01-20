@@ -1,4 +1,5 @@
 import ResizeObserver from "resize-observer-polyfill";
+import "intersection-observer";
 
 class ProtvistaOverlay extends HTMLElement {
   connectedCallback() {
@@ -35,6 +36,16 @@ class ProtvistaOverlay extends HTMLElement {
     const target = document.getElementById(this.for);
     this.sizeObserver = new ResizeObserver(this.refreshOverlay(this.for));
     this.sizeObserver.observe(target);
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 1.0
+    };
+    this.intersectionObserver = new IntersectionObserver(
+      this.refreshOverlay(this.for),
+      options
+    );
+    this.intersectionObserver.observe(target);
   }
 
   renderWhenForElementIsReady() {
@@ -62,6 +73,9 @@ class ProtvistaOverlay extends HTMLElement {
     }
     if (this.sizeObserver) {
       this.sizeObserver.disconnect();
+    }
+    if (this.intersectionObserver) {
+      this.intersectionObserver.disconnect();
     }
   }
 

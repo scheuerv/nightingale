@@ -13,7 +13,8 @@
     "customelements"
   ],
   "dependencies": {
-    "resize-observer-polyfill": "^1.5.0"
+    "resize-observer-polyfill": "^1.5.0",
+    "intersection-observer": "^0.7.0"
   },
   "repository": {
     "type": "git",
