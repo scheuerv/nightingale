@@ -66,6 +66,13 @@ class ProtvistaZoomable extends HTMLElement {
       ? this.getAttribute("highlight-event")
       : "onclick";
 
+    this._margin = {
+      top: 10,
+      right: 10,
+      bottom: 10,
+      left: 10
+    };
+
     this.trackHighlighter.setAttributesInElement(this);
 
     this._updateScaleDomain();
@@ -145,12 +152,12 @@ class ProtvistaZoomable extends HTMLElement {
 
   // eslint-disable-next-line class-methods-use-this
   get margin() {
-    return {
-      top: 10,
-      right: 10,
-      bottom: 10,
-      left: 10
-    };
+    return this._margin;
+  }
+
+  set margin(margin) {
+    this._margin = margin;
+    console.log("set margin:", margin);
   }
 
   set fixedHighlight(region) {
