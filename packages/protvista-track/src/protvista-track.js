@@ -141,8 +141,7 @@ class ProtvistaTrack extends ProtvistaZoomable {
       .style("line-height", 0)
       .append("svg")
       .attr("width", this.width)
-      .attr("height", this._height)
-      .attr("margin-bottom", 5);
+      .attr("height", this._height);
 
     this.trackHighlighter.appendHighlightTo(this.svg);
 
