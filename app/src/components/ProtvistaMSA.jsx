@@ -218,22 +218,10 @@ const ProtvistaMSAWrapper = () => {
         id="example"
       >
         <div style={{ display: "flex", width: "100%" }}>
-          <div
-            style={{
-              width: labelWidth + (showLeftCoordinate && coordinateWidth),
-              flexShrink: 0,
-            }}
-          />
           <protvista-navigation
             length={sequence.length + 1}
             displaystart="1"
             displayend="50"
-          />
-          <div
-            style={{
-              width: showRightCoordinate && coordinateWidth,
-              flexShrink: 0,
-            }}
           />
         </div>
         <protvista-msa
