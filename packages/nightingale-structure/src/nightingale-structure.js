@@ -5,7 +5,9 @@ const UP_PDB = "UP_PDB";
 const PDB_UP = "PDB_UP";
 
 class NightingaleStructure extends HTMLElement {
-  static is = "nightingale-structure";
+  static get is() {
+    return "nightingale-structure";
+  }
 
   constructor() {
     super();

@@ -13,8 +13,6 @@ import {
 import ResizeObserver from "resize-observer-polyfill";
 
 class NightingaleZoomable extends HTMLElement {
-  static is = "nightingale-zoomable";
-
   constructor() {
     super();
     NightingaleZoomable._polyfillElementClosest();

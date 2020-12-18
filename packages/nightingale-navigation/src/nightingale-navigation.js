@@ -8,9 +8,12 @@ import {
 } from "d3";
 
 import { withMargin } from "@nightingale-elements/utils";
+import { NightingaleElement } from "@nightingale-elements/types";
 
-class NightingaleNavigation extends HTMLElement {
-  static is = "nightingale-navigation";
+class NightingaleNavigation extends NightingaleElement {
+  static get is() {
+    return "nightingale-navigation";
+  }
 
   constructor() {
     super();

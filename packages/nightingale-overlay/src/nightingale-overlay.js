@@ -1,7 +1,9 @@
 import ResizeObserver from "resize-observer-polyfill";
 
 class NightingaleOverlay extends HTMLElement {
-  static is = "nigthingale-overlay";
+  static get is() {
+    return "nigthingale-overlay";
+  }
 
   connectedCallback() {
     this.for = this.getAttribute("for");

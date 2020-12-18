@@ -46,7 +46,9 @@ const deepArrayOperation = (arrays, operation) => {
 };
 
 class NightingaleVariation extends NightingaleTrack {
-  static is = "nightingale-variation";
+  static get is() {
+    return "nightingale-variation";
+  }
 
   connectedCallback() {
     super.connectedCallback();

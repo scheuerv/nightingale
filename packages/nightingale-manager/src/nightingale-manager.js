@@ -1,10 +1,14 @@
+import { NightingaleElement } from "@nightingale-elements/types";
+
 const LENGTH = "length";
 const DISPLAY_START = "displaystart";
 const DISPLAY_END = "displayend";
 const HIGHLIGHT = "highlight";
 
-class NightingaleManager extends HTMLElement {
-  static is = "nightingale-manager";
+class NightingaleManager extends NightingaleElement {
+  static get is() {
+    return "nightingale-manager";
+  }
 
   constructor() {
     super();

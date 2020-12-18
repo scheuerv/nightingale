@@ -18,7 +18,9 @@ const getNumberFromStyleString = (string, defaultValue = 0) => {
 };
 
 class NightingaleTooltip extends LitElement {
-  static is = "nightingale-tooltip";
+  static get is() {
+    return "nightingale-tooltip";
+  }
 
   static get properties() {
     return {

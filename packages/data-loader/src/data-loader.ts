@@ -50,7 +50,9 @@ const getSourceData = (children: HTMLCollection) =>
   );
 
 class DataLoader extends NightingaleElement {
-  static is = "data-loader";
+  static get is(): string {
+    return "data-loader";
+  }
 
   private _errors: Error[];
 

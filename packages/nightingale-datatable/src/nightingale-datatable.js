@@ -5,7 +5,9 @@ import { ScrollFilter } from "@nightingale-elements/utils";
 import styles from "./styles";
 
 class NightingaleDatatable extends LitElement {
-  static is = "nightingale-datatable";
+  static get is() {
+    return "nightingale-datatable";
+  }
 
   constructor() {
     super();

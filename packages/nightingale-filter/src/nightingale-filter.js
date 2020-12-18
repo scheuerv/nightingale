@@ -2,7 +2,9 @@ import { LitElement, html, css } from "lit-element";
 import groupBy from "lodash-es/groupBy";
 
 class NightingaleFilter extends LitElement {
-  static is = "nightingale-filter";
+  static get is() {
+    return "nightingale-filter";
+  }
 
   static get properties() {
     return {

@@ -3,7 +3,9 @@ import Quill from "./Quill";
 import { alphabets, formatSequence } from "./defaults";
 
 class TextareaSequence extends NightingaleElement {
-  static is = "textarea-sequence";
+  static get is() {
+    return "textarea-sequence";
+  }
 
   constructor() {
     super();

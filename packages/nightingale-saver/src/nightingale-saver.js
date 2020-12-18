@@ -2,7 +2,9 @@ import * as rasterizeHTML from "rasterizehtml";
 import { html, render } from "lit-html";
 
 class NightingaleSaver extends HTMLElement {
-  static is = "nightingale-saver";
+  static get is() {
+    return "nightingale-saver";
+  }
 
   connectedCallback() {
     // Accepted file formats

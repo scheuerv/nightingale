@@ -25,7 +25,9 @@ const getHighlightEvent = (
   });
 
 class NightingaleLinks extends NightingaleTrack {
-  static is = "nightingale-links";
+  static get is(): string {
+    return "nightingale-links";
+  }
 
   constructor() {
     super();

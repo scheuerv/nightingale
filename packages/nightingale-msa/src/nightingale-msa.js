@@ -57,7 +57,9 @@ const TrackLabel = ({
 };
 
 class NightingaleaMSA extends NightingaleZoomable {
-  static is = "nighhtingale-msa";
+  static get is() {
+    return "nightingale-msa";
+  }
 
   constructor() {
     super();

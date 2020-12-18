@@ -5,7 +5,9 @@ import NightingaleZoomable from "@nightingale-elements/nightingale-zoomable";
 const NUMBER_OF_TICKS = 3;
 
 class NightingaleSequence extends NightingaleZoomable {
-  static is = "nightingale-sequence";
+  static get is() {
+    return "nightingale-sequence";
+  }
 
   connectedCallback() {
     super.connectedCallback();

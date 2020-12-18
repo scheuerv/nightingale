@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable max-classes-per-file */
 /* eslint-disable import/prefer-default-export */
 
@@ -7,11 +8,15 @@
 export type TrackData = object;
 
 export class NightingaleElement extends HTMLElement {
-  static readonly is: string;
+  static get is(): string {
+    throw new Error(
+      '"is" static property needs to be defined as the element\'s tag name'
+    );
+  }
 
   // eslint-disable-next-line class-methods-use-this
-  render(): void {
-    /**/
+  protected render(): void {
+    /* */
   }
 }
 

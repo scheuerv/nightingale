@@ -11,7 +11,9 @@ import DefaultLayout from "./DefaultLayout";
 import { getShapeByType, getColorByType } from "./ConfigHelper";
 
 class NightingaleTrack extends NightingaleZoomable {
-  static is = "nightingale-track";
+  static get is() {
+    return "nightingale-track";
+  }
 
   getLayout() {
     if (String(this.getAttribute("layout")).toLowerCase() === "non-overlapping")
